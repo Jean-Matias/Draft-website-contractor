@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-forest: #2d6a4f;
+  --color-forest-light: #40916c;
+  --color-forest-dark: #1b4332;
+  --color-sand: #d4a373;
+  --color-sand-light: #e6c9a8;
+  --color-stone: #f8f9fa;
+  --color-surface: #e9ecef;
+  --color-charcoal: #212529;
+  --color-gray: #6c757d;
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-dm-serif-display);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-stone);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-forest-light);
+  border-radius: 4px;
+}
+
+/* Before/After slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  border: 3px solid var(--color-forest);
+  cursor: ew-resize;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  border: 3px solid var(--color-forest);
+  cursor: ew-resize;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
